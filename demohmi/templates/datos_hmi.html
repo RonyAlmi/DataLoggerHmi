@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block titulo %} INICIO HMI {% endblock %}
+
+{% block contenido %}
+{% load static %} 
+<div class="card">
+    <div id="test" class="card-header">
+        <!-- Aquí puedes escribir tu comentario 
+        <script>
+            document.write("Parametros")
+            let number = 5;
+            function hmi(){
+                console.log(`lanzamiento en ${number} segundos`);
+                number--;
+                if (number == 0){
+                    clearInterval(lanzamiento);
+                }
+            }
+            let lanzamiento = setInterval(hmi, 1000);
+
+            function get(nombre){
+                console.log(`Hola ${nombre}, buenos dias`);
+            }
+
+            setTimeout(get, 2000, 'rony');
+        </script>
+        -->
+    </div>
+    <div class="card-body">
+        
+        <h4 class="card-title">Datos</h4>
+        <table class="table">
+            
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Parametros</th>
+                    <th>Valor</th>
+                    <th>Descrpcion</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                {% for valor in valores_hmi %}
+                <tr>
+                    <td>{{ valor.id }}</td>
+                    <td>{{ valor.parametros }}</td>
+                    {% if valor.id == 1 %}
+                    <td id="hora">
+                    </td>
+                    {%  endif %}
+                    {% if valor.id == 2 %}
+                    <td id="corriente">
+                    </td>
+                    {%  endif %}
+                    {% if valor.id == 3 %}
+                    <td id="voltaje">
+                    </td>
+                    {%  endif %}
+
+                    {% if valor.id == 4 %}
+                    <td id="potenciakw">
+                    </td>
+                    {%  endif %}
+                    {% if valor.id == 5 %}
+                    <td id="frecuencia">
+                    </td>
+                    {%  endif %}
+                    {% if valor.id == 6 %}
+                    <td id="potencia">
+                    </td>
+                    {%  endif %}
+                    {% if valor.id == 7 %}
+                    <td id="velocidad">
+                    </td>
+                    {%  endif %}
+                    {% if valor.id == 8 %}
+                    <td id="temperatura">
+                    </td>
+                    {%  endif %}
+                    {% if valor.id == 9 %}
+                    <td id="nivel">
+                    </td>
+                    {%  endif %}
+                    {% if valor.id == 10 %}
+                    <td id="presion">
+                    </td>
+                    {%  endif %}
+                    {% if valor.id == 11 %}
+                    <td id="caudal">
+                    </td>
+                    {%  endif %}
+                    {% if valor.id == 12 %}
+                    <td id="acumulado">
+                        <script src="{% static 'js/main1.js' %}"> </script>
+                    </td>
+                    {%  endif %}
+
+                    <td>{{ valor.descripcion }}</td>
+                    <td> 
+                        <a name="" id="" class="btn btn-info" href="#" role="button">Actualizar</a>
+                           | 
+                           <a name="" id="" class="btn btn-danger" href="#" role="button">Borrar</a>
+                        </td>
+                </tr>
+                {% endfor %}
+                
+            </tbody>
+            
+        </table>
+        <legend id="fecha"></legend>
+        <h2 id="reloj"></h2>
+        <script src="{% static 'js/hmi.js' %}"> </script>
+    </div>
+    <div class="card-footer text-muted">
+        <!--<h1 id="app"> </h1>
+        <script src="{% static 'js/main.js' %}"> </script>
+        -->
+    </div>
+</div>
+
+
+{% endblock %}
