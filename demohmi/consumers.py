@@ -46,7 +46,7 @@ class HmiConsumer(AsyncWebsocketConsumer):
             'Host': '192.168.1.27',
             'Accept': 'text/html, */*; q=0.01',
             #'Cookie': 'PHPSESSID=9ddf09b7126d8811e91d59c7dc0d5eaa'
-            'Cookie': 'PHPSESSID=c07aca804991f882f3a54b8c1ce7ff2e'
+            'Cookie': 'PHPSESSID=33d012ba0e43bc0d7328503de568b2c7'
             }
 
             #peticion get a hmi
