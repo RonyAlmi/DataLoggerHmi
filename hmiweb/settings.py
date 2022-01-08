@@ -82,9 +82,12 @@ DATABASES = {
         #'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'hmi_data',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
+        #'USER': 'root',
+        'USER': 'Rony',
+        'PASSWORD': 'Hmi12345678',
+        'HOST': 'Rony.mysql.pythonanywhere-services.com',
+        #'PASSWORD': '',
+        #'HOST': 'localhost',
         'PORT': '3306',
 
     }
