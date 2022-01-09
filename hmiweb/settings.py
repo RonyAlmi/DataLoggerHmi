@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-z%g7(2q7vj%x&_2x9)q$@^h!$&^=313$#f5lgd3ku5ja0)4va%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['Rony.pythonanywhere.com']
 
 
 # Application definition
@@ -81,7 +81,7 @@ DATABASES = {
         #'ENGINE': 'django.db.backends.sqlite3',
         #'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hmi_data',
+        'NAME': 'Rony$hmi_data',
         #'USER': 'root',
         'USER': 'Rony',
         'PASSWORD': 'Hmi12345678',

@@ -16,24 +16,33 @@ class HmiConsumer(AsyncWebsocketConsumer):
         await self.accept()
         self.test={}
         connection = pymysql.connect(
-        user = 'root',
-        password = '',
-        host = 'localhost',
-        db = 'hmi_data'
+        #user = 'root',
+        #password = '',
+        #host = 'localhost',
+        #db = 'hmi_data'
         #port = '3306'
+
+        user = 'Rony',
+        password = 'Hmi12345678',
+        host = 'Rony.mysql.pythonanywhere-services.com',
+        db = 'Rony$hmi_data'
+        port = '3306'
+    
         )
 
         #crear listas para almacenar datos hmi
         magnitudes=list()
         valores=list()
 
+        magnitudes=['HORA','CORRIENTE','VOLTAJE','POTENCIA_KW','FRECUENCIA','POTENCIA','VELOCIDAD','TEMPERATURA','NIVEL','PRESION','CAUDAL','ACUMULADO']
+        valores=[1,2,3,4,5,6,7,8,9,10,11,12]
         # obtener fecha y hora actual y convertir a formato timestamp 
-        now = datetime.now()
-        timestamp = datetime.timestamp(now)
+        #now = datetime.now()
+        #timestamp = datetime.timestamp(now)
         #print(now)
         #print(timestamp)
         while True:
-            
+            """
             #Enlace para accesder a moniytoreo web hmi
             url = "http://192.168.1.27/RemoteMon/Data/1.php?_="+str(timestamp)
 
@@ -68,7 +77,7 @@ class HmiConsumer(AsyncWebsocketConsumer):
                     valores.append(tds[1].get_text()[1:]) 
                 except:
                     print("valores html no encontrados")
-            
+            """
             try:
 
                 #convertir listas a diccionario
