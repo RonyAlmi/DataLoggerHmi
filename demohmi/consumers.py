@@ -21,11 +21,10 @@ class HmiConsumer(AsyncWebsocketConsumer):
         #host = 'localhost',
         #db = 'hmi_data'
         #port = '3306'
-
         user = 'Rony',
         password = 'Hmi12345678',
         host = 'Rony.mysql.pythonanywhere-services.com',
-        db = 'Rony$hmi_data'
+        db = 'Rony$hmi_data',
         port = '3306'
     
         )
@@ -119,4 +118,4 @@ class HmiConsumer(AsyncWebsocketConsumer):
                 #await sleep(1)
             magnitudes.clear()
             valores.clear()
-            await sleep(0.05)
+            await sleep(0.5)
