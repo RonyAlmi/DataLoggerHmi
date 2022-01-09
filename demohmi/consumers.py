@@ -24,8 +24,8 @@ class HmiConsumer(AsyncWebsocketConsumer):
         user = 'Rony',
         password = 'Hmi12345678',
         host = 'Rony.mysql.pythonanywhere-services.com',
-        db = 'Rony$hmi_data',
-        port = '3306'
+        db = 'Rony$hmi_data'
+        #port = '3306'
     
         )
 
