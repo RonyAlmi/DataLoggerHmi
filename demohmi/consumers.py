@@ -81,7 +81,8 @@ class HmiConsumer(AsyncWebsocketConsumer):
             try:
 
                 #convertir listas a diccionario
-                dict_magnitudes_valores = dict(zip(magnitudes[1:], valores[1:]))
+                #dict_magnitudes_valores = dict(zip(magnitudes[1:], valores[1:]))
+                dict_magnitudes_valores = dict(zip(magnitudes, valores))
                 #print(dict_magnitudes_valores)
                 #print(dict_magnitudes_valores['HORA'])
                 valor_hora = dict_magnitudes_valores['HORA']
