@@ -3,7 +3,7 @@ var socket =new WebSocket('ws://rony.pythonanywhere.com/ws/demohmi/');
 
 socket.onmessage = function(e){
     var djangoData = JSON.parse(e.data);
-    //console.log(djangoData);
+    console.log(djangoData);
     document.querySelector('#hora').innerText = djangoData.HORA;
     document.querySelector('#corriente').innerText = djangoData.CORRIENTE;
     document.querySelector('#voltaje').innerText = djangoData.VOLTAJE;
